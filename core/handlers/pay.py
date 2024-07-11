@@ -8,7 +8,7 @@ async def order(message: Message, bot: Bot):
         title='Payment by tg bot',
         description='2 rub',
         payload='Payment with a bot',
-        provider_token='381764678:TEST:89689',
+        provider_token='',
         currency='rub',
         prices=[
             LabeledPrice(
