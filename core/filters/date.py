@@ -3,7 +3,7 @@ from aiogram.types import Message
 from aiogram import Bot
 from core.dao.gspread import *
 
-
+# проверяем введённую дату. Если валидная - добавляем в таблицу
 async def check_if_data(message: Message, bot: Bot):
     try:
         date_format = "%d.%m.%y"

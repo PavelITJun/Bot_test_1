@@ -1,7 +1,7 @@
 from environs import Env
 from dataclasses import dataclass
 
-
+# Получаем приватные данные из файла input.txt 
 @dataclass
 class Bots:
     bot_token: str

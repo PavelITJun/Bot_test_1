@@ -1,5 +1,6 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, KeyboardButtonPollType
 
+# Создаём reply-кнопки
 reply_keyboard = ReplyKeyboardMarkup(keyboard=[
     [
         KeyboardButton(

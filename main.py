@@ -10,21 +10,14 @@ from core.handlers.pay import *
 from core.handlers.send_media import *
 from core.handlers.sheets import *
 
- 
-async def start_bot(bot: Bot):
-    await bot.send_message(settings.bots.admin_id, text='Bot is started')
-
-
-async def stop_bot(bot):
-    await bot.send_message(settings.bots.admin_id, text='Bot is stopped')
-
 
 async def start():
+    # Логирование
     logging.basicConfig(level=logging.INFO,
                         format="%(asctime)s - [%(levelname)s] - %(name)s"
                                "(%(filename)s).%(funcName)s(%(lineno)d) - %(message)s")
     bot = Bot(token=settings.bots.bot_token)
-
+    # Регистрация хэндлеров
     dp = Dispatcher()
     dp.message.register(get_start, Command(commands=['start', 'run']))
     dp.message.register(button1, F.text=='Кнопка 1')
@@ -36,7 +29,7 @@ async def start():
     dp.message.register(check_if_data)
 
 
-
+    # Запуск бота
     try:
         await dp.start_polling(bot)
     finally:
