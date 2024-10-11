@@ -50,7 +50,8 @@
     - Создайте бота через [BotFather](https://t.me/BotFather) и получите API токен.
     - Добавьте токен в файл конфигурации `.env`:
       ```bash
-      TELEGRAM_TOKEN=<Ваш_Токен>
+      TOKEN=<Ваш_Токен>
+      ADMIN_ID=<Ваш ID в телеграм>
       ```
 
 5. Настройте Google Sheets API:
